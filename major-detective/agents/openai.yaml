@@ -1,0 +1,4 @@
+interface:
+  display_name: "大学专业侦探"
+  short_description: "调查大学专业真实内容、适配风险、升学就业路径与替代选择。"
+  default_prompt: "调查一个大学专业，生成面向高考生和家长的专业真相报告。"
