@@ -58,6 +58,12 @@
 
 详见 [INSTALL.md](./INSTALL.md)。
 
+下载 ZIP：
+
+```text
+https://github.com/Automatic-Airz/major-detective-skill/releases/download/v0.1.0/major-detective-skill-v0.1.0.zip
+```
+
 ## 示例产物
 
 Skill 内置了 PDF 报告生成脚本：

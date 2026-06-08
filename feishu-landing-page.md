@@ -30,6 +30,12 @@ GitHub:
 https://github.com/Automatic-Airz/major-detective-skill
 ```
 
+GitHub Release ZIP 直链：
+
+```text
+https://github.com/Automatic-Airz/major-detective-skill/releases/download/v0.1.0/major-detective-skill-v0.1.0.zip
+```
+
 Gitee 镜像:
 
 ```text
