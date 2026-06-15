@@ -42,11 +42,13 @@ Gitee 镜像:
 https://gitee.com/AutoAirz/major-detective-skill
 ```
 
-下载 Release 附件：
+推荐优先下载 GitHub Release 附件：
 
 ```text
 major-detective-skill-v0.1.0.zip
 ```
+
+如果 GitHub 打不开，可以使用 Gitee 镜像页面里的“克隆/下载”。
 
 ## 安装到 Codex
 

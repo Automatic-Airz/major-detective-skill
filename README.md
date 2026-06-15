@@ -64,6 +64,14 @@
 https://github.com/Automatic-Airz/major-detective-skill/releases/download/v0.1.0/major-detective-skill-v0.1.0.zip
 ```
 
+Gitee 镜像：
+
+```text
+https://gitee.com/AutoAirz/major-detective-skill
+```
+
+如果 GitHub 访问不稳定，可以打开 Gitee 镜像页面，选择“克隆/下载”获取源码包。
+
 ## 示例产物
 
 Skill 内置了 PDF 报告生成脚本：
