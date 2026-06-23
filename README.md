@@ -1,37 +1,98 @@
-# 大学专业侦探 Skill
+# 大学专业侦探 Skill 下载与安装
 
-一个面向高考专业选择的 AI Agent Skill。它不替你填志愿，也不预测录取概率，而是帮助学生和家长把专业、学校、位次、培养方案、就业去向和家庭期待拆开核验。
+> 高考专业选择不是让 AI 替你填志愿，而是让 Agent 帮你把专业、学校、家长期待和官方核验步骤拆清楚。
 
-## 它能做什么
+## 这是什么
 
-- 引导学生补充关键信息：省份、选科、位次、兴趣、排斥项、家庭期待。
-- 分析大学专业的真实学习内容、常见误解、适合条件和风险点。
-- 对比相邻专业，例如医学检验技术、药学、卫生检验与检疫。
-- 生成给家长看的沟通版，强调共同核验而不是对立说服。
-- 生成官方核验清单：省考试院投档表、招生计划、招生章程、培养方案、就业报告。
-- 生成院校-专业候选池表格，数据不足时明确标注为“待核验搜索种子”。
-- 生成 Markdown / PDF 报告样例。
+「大学专业侦探」是一个 AI Agent Skill，用来辅助高考生和家长做专业调查。
 
-## 适合谁
+它可以帮你：
 
-- 刚高考完、不知道怎么选专业的学生。
-- 想和家长讨论专业选择，但不知道如何组织信息的学生。
-- 想快速了解某个专业是否适合自己的家庭。
-- 想用 Agent Skill 做结构化专业调查的 AI 用户。
+- 分析一个专业真实学什么。
+- 对比相邻专业的学习内容和就业路径。
+- 生成给家长看的沟通版。
+- 生成官方核验清单。
+- 生成院校-专业候选池表格。
+- 生成招办/学长学姐提问清单。
+- 生成可打印 PDF 报告。
 
-## 不适合什么
+它不会：
 
-本 Skill 不是：
+- 替你填志愿。
+- 预测录取概率。
+- 承诺就业稳定。
+- 编造分数线、位次、计划数、排名、经费或网评。
+- 模仿或蒸馏任何教育博主/名人。
 
-- 官方志愿填报服务。
-- 录取概率预测器。
-- 分数线数据库。
-- 保证就业或升学的工具。
-- 某位教育博主或名人的模仿版。
+## 下载
 
-## 快速开始
+GitHub Release ZIP 直链：
 
-安装后可以直接问：
+```text
+https://github.com/Automatic-Airz/major-detective-skill/releases/download/v0.1.0/major-detective-skill-v0.1.0.zip
+```
+
+GitHub 仓库：
+
+```text
+https://github.com/Automatic-Airz/major-detective-skill
+```
+
+Gitee 镜像：
+
+```text
+https://gitee.com/AutoAirz/major-detective-skill
+```
+
+推荐优先下载：
+
+```text
+major-detective-skill-v0.1.0.zip
+```
+
+如果 GitHub 打不开，可以使用当前 Gitee 页面右上角或页面中的“克隆/下载”获取源码包。
+
+## 安装到 Codex
+
+解压后，打开终端，进入解压目录，运行：
+
+```bash
+mkdir -p "$HOME/.codex/skills"
+cp -R major-detective "$HOME/.codex/skills/major-detective"
+```
+
+检查：
+
+```bash
+ls "$HOME/.codex/skills/major-detective/SKILL.md"
+```
+
+然后重启 Codex。
+
+## 安装到 Claude Code
+
+解压后，打开终端，进入解压目录，运行：
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R major-detective "$HOME/.claude/skills/major-detective"
+```
+
+检查：
+
+```bash
+ls "$HOME/.claude/skills/major-detective/SKILL.md"
+```
+
+然后重启 Claude Code。
+
+Claude Code 中也可以直接用：
+
+```text
+/major-detective 我是山东物化生，家里建议医学/生物相关，我喜欢实验但不想读博，帮我分析专业方向。
+```
+
+## 示例 Prompt
 
 ```text
 使用大学专业侦探 Skill。
@@ -48,59 +109,74 @@
 5. 可打印报告
 ```
 
-如果你不知道怎么说，也可以问：
+如果你不知道怎么说，可以直接问：
 
 ```text
 使用大学专业侦探 Skill。我想看看医学检验技术怎么样，但我现在也不知道该说什么。
 ```
 
-## 安装
-
-详见 [INSTALL.md](./INSTALL.md)。
-
-下载 ZIP：
-
-```text
-https://github.com/Automatic-Airz/major-detective-skill/releases/download/v0.1.0/major-detective-skill-v0.1.0.zip
-```
-
-Gitee 镜像：
-
-```text
-https://gitee.com/AutoAirz/major-detective-skill
-```
-
-如果 GitHub 访问不稳定，可以打开 Gitee 镜像页面，选择“克隆/下载”获取源码包。
-
 ## 示例产物
 
-Skill 内置了 PDF 报告生成脚本：
+这个 Skill 不只是输出一段聊天回答，它可以把结果整理成可交付材料，例如：
+
+- 三专业真实路径对比表
+- 给家长看的沟通版
+- 官方核验清单
+- 院校-专业候选池表格
+- 招办/学长学姐提问清单
+- 可打印 PDF 报告
+
+示例 PDF 报告内容包括：
+
+- 用户画像
+- 一句话判断
+- 三专业对比
+- 风险雷达
+- 官方核验清单
+- 家长沟通版
+- 下一步行动
+
+![示例 PDF 报告预览](major-detective/examples/pdf-proof/rendered/report.pdf.png)
+
+## 生成 PDF 报告
+
+如果你的环境有 Python 和 ReportLab，可以运行：
 
 ```bash
 python3 major-detective/scripts/render_pdf_report.py --output-dir output/pdf-demo
 ```
 
-在 Codex 桌面环境里，推荐使用 bundled Python：
+在 Codex 桌面环境中，推荐使用：
 
 ```bash
 /Users/air/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 major-detective/scripts/render_pdf_report.py --output-dir output/pdf-demo
 ```
 
-样例输出：
+生成结果：
 
 ```text
-report.md
-report.pdf
+output/pdf-demo/report.md
+output/pdf-demo/report.pdf
 ```
 
-## 安全边界
+如果 PDF 生成失败，可以先让 Agent 生成 `report.html`，再用浏览器打印为 PDF。
 
-使用时请记住：
+## 适合场景
 
-- 所有招生计划、投档位次、选科要求，以省级教育招生考试院和高校官方信息为准。
-- 院校-专业候选池不是推荐名单，数据未核验时只作为搜索种子。
-- 网评只能作为问题线索，不能替代培养方案、就业报告和在校生多方核验。
-- 科研项目多说明学科活跃，不等于本科体验一定好，也不等于就业一定好。
+- 高考后不知道该怎么选专业。
+- 家里建议一个专业，但你不确定适不适合自己。
+- 想比较几个相近专业。
+- 想和家长一起核验信息，而不是凭印象争论。
+
+## 安全声明
+
+本 Skill 不是官方志愿填报建议，也不是录取预测工具。所有招生计划、投档位次、选科要求、体检要求、培养方案和就业信息，都应以省级教育招生考试院和高校官方发布为准。
+
+院校-专业候选池如果标注为“待核验搜索种子”，意思是：它只是下一步该查什么，不是推荐你填什么。
+
+网评只能作为问题线索，不能替代官方培养方案、就业报告和在校生多方核验。
+
+科研项目多说明学科活跃，但不等于本科体验一定好，也不等于就业一定好。
 
 ## 作者
 
