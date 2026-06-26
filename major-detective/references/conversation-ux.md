@@ -77,9 +77,38 @@ Use an information completeness meter in personal-fit situations:
 
 Guideline:
 
-- 20-40%: only major name or vague interest. Produce a compact基础版, show information completeness, ask 3-5 guided questions, and offer only light next steps. Do not produce a long encyclopedic report.
-- 40-70%: enough for personal-fit draft. Produce report and ask 3-5 follow-ups.
-- 70%+: produce personal-fit report and offer deliverables.
+- 20-40%: only major name or vague interest. Produce a compact基础版, show information completeness, ask 3-5 guided questions, and mention that deliverables can be generated after the user answers. Do not produce a long encyclopedic report.
+- 40-70%: enough for a personal-fit draft. Produce the draft, ask 3-5 follow-ups, and offer a small next-step menu so the user knows what can be generated.
+- 70%+: enough for a personal-fit report. Produce the report and end with a concrete deliverable menu. Do not end with questions only.
+
+## Ask-Or-Offer Gate
+
+Use this gate at the end of every meaningful answer:
+
+```text
+如果信息还不够完整：继续追问关键问题。
+如果信息已经能支持一版判断：主动端出交付菜单。
+```
+
+Sparse-context ending:
+
+```text
+我先不直接生成完整报告，因为还缺几个会影响判断的信息。你可以回答下面 3-5 个问题；回答后我可以继续生成「个人适配版报告」「家长沟通版」「核验清单」或「可打印 report.md / report.html / report.pdf（若环境支持）」。
+```
+
+Reasonably-complete ending:
+
+```text
+这版信息已经足够进入交付物阶段。你接下来可以选一个，我直接生成：
+1. 「下一步核验清单」
+2. 「家长沟通版 / 微信短版」
+3. 「专业对比表」
+4. 「院校-专业候选池表格」
+5. 「招办/学长学姐提问清单」
+6. 「可打印报告」：report.md / report.html / report.pdf（若环境支持）
+```
+
+Do not make the user ask "有没有这道菜". Surface the menu yourself once the answer has enough context.
 
 ## Sparse Input Answer Shape
 
@@ -115,7 +144,7 @@ Use this structure:
 2. 专业对比表
 3. 家长沟通版
 4. 下一步核验清单
-5. 可打印 report.md / report.html
+5. 可打印 report.md / report.html / report.pdf（若环境支持）
 ```
 
 Avoid deep official catalog, policy, or source-heavy discussion in the first sparse answer unless the user explicitly asks for official verification.
@@ -131,7 +160,7 @@ Use this pattern:
 1. 生成「下一步核验清单」：告诉你和家长接下来查什么、问什么、比较什么。
 2. 生成「家长沟通版」：整理成可以直接发给父母的一页说明。
 3. 生成「专业对比表」：把这个专业和 2-3 个相邻专业放在一起比较。
-4. 生成「可打印报告」：输出 report.md / report.html，方便保存或打印成 PDF。
+4. 生成「可打印报告」：输出 report.md / report.html / report.pdf（若环境支持），方便保存或打印。
 ```
 
 For school-major matching contexts, prefer this menu:
@@ -142,7 +171,7 @@ For school-major matching contexts, prefer this menu:
 2. 生成「官方核验清单」：列出省考试院、招生计划、招生章程、培养方案、就业报告分别查什么。
 3. 生成「家长沟通版」：把为什么不能只看“医学/生物稳定”讲成家长容易接受的话。
 4. 生成「招办/学长学姐提问清单」：把网评线索转成可核验问题。
-5. 生成「可打印 HTML/PDF-ready 报告」：方便保存、截图或和家里讨论。
+5. 生成「可打印报告」：report.md / report.html / report.pdf（若环境支持），方便保存、截图或和家里讨论。
 ```
 
 For parent-facing outputs, offer two lengths when useful:
@@ -170,12 +199,15 @@ Offer deliverables proactively after:
 - The user asks how to share with parents.
 - The user asks how to save, print, compare, or continue.
 - The user seems uncertain about next steps.
+- The answer already contains enough context for a draft judgment, even if a few verification questions remain.
 
 Do not offer every deliverable after a tiny quick answer. For sparse input, offer only:
 
 ```text
-我可以先做基础版，也可以先引导你补充 5 个信息。回答后可以继续生成个人适配版、家长沟通版、核验清单或可打印报告。
+我可以先做基础版，也可以先引导你补充 5 个信息。回答后可以继续生成个人适配版、家长沟通版、核验清单或可打印 report.md / report.html / report.pdf（若环境支持）。
 ```
+
+For complete or near-complete answers, the final block should be a menu, not a vague "还想了解什么".
 
 ## Good Closing Examples
 
@@ -187,7 +219,7 @@ Do not offer every deliverable after a tiny quick answer. For sparse input, offe
 你也可以选：
 1. 家长沟通版
 2. 专业对比表
-3. 可打印报告 HTML/PDF-ready
+3. 可打印报告：report.md / report.html / report.pdf（若环境支持）
 ```
 
 ### After a parent conflict
@@ -198,7 +230,7 @@ Do not offer every deliverable after a tiny quick answer. For sparse input, offe
 我可以继续帮你生成：
 1. 给家长看的冷静版
 2. 一页专业对比表
-3. 可打印报告
+3. 可打印报告：report.md / report.html / report.pdf（若环境支持）
 ```
 
 ### After a comparison
@@ -209,7 +241,7 @@ Do not offer every deliverable after a tiny quick answer. For sparse input, offe
 我可以继续生成：
 1. 目标学校核验表
 2. 家长沟通版
-3. report.html 可打印报告
+3. 可打印报告：report.md / report.html / report.pdf（若环境支持）
 ```
 
 ### After a school-major matching answer
@@ -222,4 +254,5 @@ Do not offer every deliverable after a tiny quick answer. For sparse input, offe
 2. 官方数据核验清单
 3. 家长沟通版
 4. 招办/在校生提问清单
+5. 可打印报告：report.md / report.html / report.pdf（若环境支持）
 ```

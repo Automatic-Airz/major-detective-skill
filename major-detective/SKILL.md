@@ -46,7 +46,10 @@ Do not make final报考 decisions for the user. Make uncertainty visible, ask fo
 
 6. Build the answer using the report schema. When details are uncertain, say what should be verified and where to verify it.
 
-7. End substantial answers with a small menu of next actions, such as generating a核验清单, 家长沟通版, 专业对比表, or可打印 report.md/report.html. Do not make users guess the next prompt.
+7. Use an "ask-or-offer" ending gate:
+   - If information is still sparse or key decision context is missing, continue guided intake: ask up to 5 focused questions, allow "不确定", and say which deliverables can be generated after the user answers.
+   - If the discussion is reasonably complete, end with a concrete deliverable menu and ask which one the user wants generated next. Do not make users guess the right prompt or ask whether a deliverable exists.
+   - The menu should include relevant options such as下一步核验清单, 家长沟通版, 专业对比表, 院校-专业候选池, 招办/学长学姐提问清单, and可打印报告. For printable reports, explicitly mention `report.md`, `report.html`, and `report.pdf` when PDF generation is available; otherwise mention HTML/PDF-ready fallback.
 
 ## Reference Loading
 
@@ -75,7 +78,8 @@ For unsupported majors, still apply the workflow, but clearly mark that the answ
 - When comparing majors, use the same dimensions for every major.
 - When matching schools and majors, use rank-based historical data with source year and uncertainty. Do not fabricate cutoffs, rankings, funding numbers, or student reviews.
 - If score/rank data is missing or unverified, frame school lists as "待核验搜索种子" or "预筛倾向", not recommendations or final冲稳保志愿档位.
-- Proactively offer relevant student/family deliverables at the end of substantial answers: next-step checklist, parent version, comparison table, printable report.
+- Proactively offer relevant student/family deliverables at the end of substantial answers: next-step checklist, parent version, comparison table, school-major candidate pool, admissions/senior question list, and printable report.
+- Do not end a reasonably complete answer with questions only. Pair any remaining questions with a small "你也可以直接生成..." menu.
 - Do not offer creator-facing content scripts as a default student-facing next step. When explicitly generating them, preserve safety boundaries and avoid dramatized scare tactics.
 
 ## Minimal Starter Majors

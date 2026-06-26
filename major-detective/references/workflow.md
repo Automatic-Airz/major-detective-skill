@@ -38,6 +38,11 @@ Ask no more than 5 follow-up questions at once. Prefer multiple-choice style que
 
 For sparse input, avoid a long official-source-heavy report in the first turn. Save detailed policy, catalog, and school-specific verification for the核验清单 or deliverable report.
 
+Use an ask-or-offer gate:
+
+- If information is sparse, ask focused follow-up questions and mention that the user can generate deliverables after answering.
+- If information is reasonably complete, do not end with questions only. Offer a concrete deliverable menu and ask which one to generate.
+
 ## End With Next Actions
 
 After any substantial report, offer 2-5 concrete next actions. Default options should serve the student/family workflow:
@@ -46,7 +51,8 @@ After any substantial report, offer 2-5 concrete next actions. Default options s
 - 生成家长沟通版
 - 生成专业对比表
 - 生成院校-专业候选池
-- 生成可打印 report.md / report.html
+- 生成招办/学长学姐提问清单
+- 生成可打印 report.md / report.html / report.pdf（若环境支持）
 
 Only offer creator-facing投稿展示稿 when the user has explicitly asked about投稿、运营、图文、短视频、or demo.
 

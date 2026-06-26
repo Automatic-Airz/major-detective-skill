@@ -59,15 +59,18 @@ Validation:
 
 ## Proactive Offering
 
-Do not wait for the user to know the deliverable names. After a substantial report, offer:
+Do not wait for the user to know the deliverable names. After a substantial report or reasonably complete consultation, offer:
 
 ```text
-你接下来可以选一个：
+这版信息已经足够进入交付物阶段。你接下来可以选一个，我直接生成：
 1. 生成「下一步核验清单」
-2. 生成「家长沟通版」
+2. 生成「家长沟通版 / 微信短版」
 3. 生成「专业对比表」
-4. 生成「可打印报告」：report.md / report.html，方便保存或打印成 PDF
+4. 生成「招办/学长学姐提问清单」
+5. 生成「可打印报告」：report.md / report.html / report.pdf（若环境支持）
 ```
+
+If key context is missing, do not offer the full menu yet. Ask focused follow-up questions first, then say what can be generated after the user answers.
 
 For normal student/family answers, do not include creator-facing scripts in this menu unless the user has asked about投稿、运营、图文、短视频、or demo.
 
@@ -79,7 +82,8 @@ For school-major matching answers, include student/family artifacts before gener
 2. 官方数据核验清单
 3. 专业质量比较表
 4. 家长沟通版 / 微信短版
-5. 可打印 HTML/PDF-ready 报告
+5. 招办/学长学姐提问清单
+6. 可打印报告：report.md / report.html / report.pdf（若环境支持）
 ```
 
 ## Required Report Sections
@@ -153,6 +157,8 @@ A deliverable should make Skill output clearly different from no-Skill chat by i
 - A family communication section.
 - A verification checklist.
 - A next-step action list.
+- A clear final menu that offers the next deliverable instead of making the user invent the prompt.
+- A printable report option that names `report.md`, `report.html`, and `report.pdf` when PDF generation is available.
 
 If these are missing, the output may feel too similar to ordinary chat.
 

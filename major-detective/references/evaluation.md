@@ -17,9 +17,10 @@ A passing answer should:
 9. Avoid admission prediction, guaranteed employment, salary promises, and absolute "must报/千万别报" language.
 10. Adapt tone and structure to the requested mode: report, quick, compare, parent, action checklist, deliverable, or optional creator-facing content.
 11. End substantial answers by offering relevant next deliverables so the user does not need to know the right prompt.
-12. For school-major matching, use source-labeled historical rank data or explicitly refuse to invent missing values.
-13. For school-major matching without verified data, label institution lists as "待核验搜索种子" or "预筛倾向", not final recommendations.
-14. For parent-facing outputs, preserve共同核验 tone and offer a short shareable version when useful.
+12. Use the ask-or-offer gate: sparse information should trigger guided follow-up questions; reasonably complete information should trigger a concrete deliverable menu, including printable report options.
+13. For school-major matching, use source-labeled historical rank data or explicitly refuse to invent missing values.
+14. For school-major matching without verified data, label institution lists as "待核验搜索种子" or "预筛倾向", not final recommendations.
+15. For parent-facing outputs, preserve共同核验 tone and offer a short shareable version when useful.
 
 ## Smoke-Test Prompts
 
@@ -239,6 +240,8 @@ Revise the skill if outputs:
 - Use final冲稳保 labels without source-labeled historical rank data.
 - Produce a report that is long but not decision-useful.
 - Omit official verification steps.
+- End a reasonably complete answer with questions only and no deliverable menu.
+- Mention printable reports vaguely without naming `report.md`, `report.html`, and `report.pdf` when PDF generation is available.
 
 ## Optimization Loop
 
@@ -268,5 +271,6 @@ Hard gates before recording:
 - The Skill can generate an official verification checklist covering provincial投档表, current-year招生计划,招生章程,培养方案,就业报告, and student/current-school questions.
 - The Skill can generate a printable report package request: `report.md` + `report.html` with visible disclaimer, user profile, risk radar, parent brief, and next actions.
 - Substantial answers end with a next-deliverable menu, especially家长沟通版、核验清单、候选池表格、招办/学长学姐提问清单、可打印报告.
+- The next-deliverable menu appears automatically once the conversation has enough context; the user should not need to ask whether these artifacts exist.
 - There is no repeated full-body output in the recorded demo.
 - If web sources are used, the output includes clear source titles or links, not only bare domains.
